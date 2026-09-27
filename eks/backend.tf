@@ -10,7 +10,7 @@ terraform {
     bucket         = "jenkins-server-tf-state-demo"
     region         = "us-east-1"
     key            = "eks/terraform.tfstate"
-    use-lockfile   = true
+    use_lockfile   = true
     encrypt        = true
   }
 }
