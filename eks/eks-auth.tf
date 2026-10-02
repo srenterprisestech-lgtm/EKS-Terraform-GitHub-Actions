@@ -8,7 +8,7 @@ data "aws_eks_cluster_auth" "eks" {
   name = module.eks.cluster_name
 }
 
-resource "kubernetes_config_map_v1" "aws_auth" {
+resource "kubernetes_config_map" "aws_auth" {
   metadata {
     name      = "aws-auth"
     namespace = "kube-system"
