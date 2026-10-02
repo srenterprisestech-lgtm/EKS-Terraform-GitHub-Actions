@@ -14,6 +14,10 @@ resource "kubernetes_config_map_v1" "aws_auth" {
     namespace = "kube-system"
   }
 
+  lifecycle {
+    ignore_changes = [metadata[0].annotations]
+  }
+
   data = {
     mapRoles = <<YAML
 - rolearn: ${module.eks.nodegroup_role_arn}
