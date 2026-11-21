@@ -7,11 +7,11 @@ terraform {
     }
   }
   backend "s3" {
-    bucket         = "jenkins-server-tf-state-demo-raj"
-    region         = "us-east-1"
-    key            = "eks/terraform.tfstate"
-    use_lockfile   = true
-    encrypt        = true
+    bucket       = "jenkins-server-tf-state-demo-raj"
+    region       = "us-east-1"
+    key          = "eks/terraform.tfstate"
+    use_lockfile = true
+    encrypt      = true
   }
 }
 
